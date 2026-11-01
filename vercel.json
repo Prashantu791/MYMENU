@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/FRONTEND/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/FRONTEND/$1"
+    }
+  ]
+}
