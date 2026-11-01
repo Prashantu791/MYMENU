@@ -1,0 +1,4 @@
+BACKEND/target/
+*.class
+.DS_Store
+Thumbs.db

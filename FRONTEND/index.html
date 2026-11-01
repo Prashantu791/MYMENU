@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MYMENU | Maharashtrian Pure Veg Mess Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="ambientGlow3D" class="ambient-glow-3d"></div>
+
+<header class="navbar">
+  <a class="logo" href="#">
+    <div class="logo-mark">MY<span>MENU</span></div>
+    <small>Aapka Mess, Aapka Menu</small>
+  </a>
+  <nav id="mainNavLinks" class="modern-nav-capsule">
+    <a class="active" href="#"><span>🏠</span> Home</a>
+    <a href="javascript:void(0)" onclick="handleNavMenuClick()" class="nav-menu-link">
+      <span>🍱</span> Today's Menu
+      <span class="nav-live-dot" title="Live Today"></span>
+    </a>
+    <a href="#about"><span>🌿</span> Pure Veg Promise</a>
+    <div class="nav-area-chip" title="Sant Tukaram Nagar, Pimpri">
+      <span>📍</span>
+      <small>Sant Tukaram Nagar</small>
+    </div>
+  </nav>
+  <div class="nav-actions">
+    <button class="login" id="navLoginBtn" onclick="openCustomerAuthModal('login')"><span class="btn-text-long">Customer </span>Login</button>
+    <button class="register" id="navRegisterBtn" onclick="openCustomerAuthModal('register')">Create Account</button>
+    <button class="btn-nav-owner" id="navOwnerPortalBtn" onclick="openOwnerAuthModal('login')">
+      <span class="nav-owner-text-long">👨‍🍳 Mess Owner Portal</span>
+      <span class="nav-owner-text-short">👨‍🍳 Owner</span>
+    </button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-copy">
+    <div class="hero-top-badge">
+      <span class="veg-icon-dot"></span>
+      <span>100% PURE VEGETARIAN • SANT TUKARAM NAGAR, PIMPRI</span>
+    </div>
+
+    <!-- Enhanced Headline with Animated Left Cultural Pillar -->
+    <div class="hero-headline-wrap">
+      <div class="hero-left-accent-pillar" aria-hidden="true" title="Asal Marathi Homely Taste">
+        <div class="accent-pillar-line">
+          <div class="accent-pillar-beam"></div>
+        </div>
+        <div class="accent-pillar-badge">
+          <span class="pillar-emoji">🍲</span>
+          <span class="pillar-pulse-ring"></span>
+        </div>
+        <div class="accent-pillar-line"></div>
+      </div>
+
+      <div class="hero-headline-text">
+        <div class="hero-cultural-tag">
+          <span class="hct-icon">✨</span>
+          <span class="hct-marathi">अस्सल घरगुती चव</span>
+          <span class="hct-sep">•</span>
+          <span class="hct-en">Fresh Handmade Thali</span>
+        </div>
+        <h1>Ghar Jaisa <span>Marathi Jevan,</span><br>Har Din Ka <span>Fresh Menu!</span></h1>
+      </div>
+    </div>
+
+    <p class="hero-desc">Apne area ke trusted mess ka daily menu, rice plate price aur direct parcel booking — sab ek hi jagah.</p>
+    
+    <div class="hero-stat-tiles">
+      <div class="neu-stat-tile">
+        <div class="stat-circle-box">
+          <img src="images/rassa_bhaji_3d.jpg" onerror="this.onerror=null; this.src='https://b.zmtcdn.com/data/pictures/chains/2/6507122/ab7aea690fea7609339bf1e432b01257.jpg';" alt="10+ Messes" class="stat-circle-img" loading="eager">
+          <div class="stat-circle-ring"></div>
+        </div>
+        <div>
+          <strong>10+</strong>
+          <span>Certified Messes</span>
+        </div>
+      </div>
+      <div class="neu-stat-tile">
+        <div class="stat-circle-box">
+          <img src="images/chapati_bhaji_3d.jpg" onerror="this.onerror=null; this.src='https://b.zmtcdn.com/data/dish_photos/4a8/af2fe08759773801218ba2b1e63154a8.jpeg';" alt="Unlimited Thali" class="stat-circle-img" loading="eager">
+          <div class="stat-circle-ring"></div>
+        </div>
+        <div>
+          <strong>₹60 - ₹90</strong>
+          <span>Unlimited Thali</span>
+        </div>
+      </div>
+      <div class="neu-stat-tile">
+        <div class="stat-circle-box">
+          <img src="images/special_deluxe_3d.jpg" onerror="this.onerror=null; this.src='https://b.zmtcdn.com/data/pictures/chains/7/21469117/172802538820f3b17f-9558-4934-a579-11318e57f871.jpg?crop=750%3A500%3B%2A%2C%2A&fit=around%7C750%3A500';" alt="Fast Parcel" class="stat-circle-img" loading="eager">
+          <div class="stat-circle-ring"></div>
+        </div>
+        <div>
+          <strong>Fast</strong>
+          <span>Parcel Booking</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-buttons" id="heroButtonsContainer">
+      <button type="button" class="btn-neu-primary" id="heroMainBtn" onclick="openCustomerAuthModal('login')">🍱 Customer Login & View Menus</button>
+      <a href="javascript:void(0)" class="btn-neu-secondary" id="heroRegisterBtn" onclick="openOwnerAuthModal('register')">👨‍🍳 Register Your Mess</a>
+    </div>
+
+    <div class="hero-features-bar">
+      <span>✨ Clean & Hygienic</span>
+      <span class="feat-dot">•</span>
+      <span>🫓 Soft Chapati & Rice</span>
+      <span class="feat-dot">•</span>
+      <span>🌶️ Garam Rassa Bhaji</span>
+      <span class="feat-dot">•</span>
+      <span>📞 Direct Phone Call</span>
+    </div>
+  </div>
+
+  <!-- 3D Overlapping 4-Square Food Showcase Stage -->
+  <div class="hero-3d-wrapper" id="hero3dWrapper">
+    <div class="hero-3d-stage" id="hero3dStage">
+      <!-- 3D Cast Shadow Base -->
+      <div class="hero-quad-shadow"></div>
+
+      <!-- 4 Overlapping Rounded Squares Cluster -->
+      <div class="hero-quad-cluster" id="heroQuadCluster">
+        
+        <!-- Square 1: Top-Left (Layer 1) -->
+        <div class="quad-card quad-card-1" id="quadCard1" onclick="open3DShowcase('Kolhapuri Kat Rassa Thali', 'img2', '₹70')" title="Click to view 3D plate">
+          <div class="quad-card-inner">
+            <img src="images/rassa_bhaji_3d.jpg" onerror="this.onerror=null; this.src='https://b.zmtcdn.com/data/pictures/chains/2/6507122/ab7aea690fea7609339bf1e432b01257.jpg';" alt="Kolhapuri Kat Rassa" class="quad-img" draggable="false" loading="eager">
+            <div class="quad-glare"></div>
+            <div class="quad-brass-rim"></div>
+            <div class="quad-tag-pill">
+              <span>🌶️ Kat Rassa</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Square 2: Top-Right (Layer 2) -->
+        <div class="quad-card quad-card-2" id="quadCard2" onclick="open3DShowcase('Garam Chapati Poli', 'img3', '₹70')" title="Click to view 3D plate">
+          <div class="quad-card-inner">
+            <img src="images/chapati_bhaji_3d.jpg" onerror="this.onerror=null; this.src='https://b.zmtcdn.com/data/dish_photos/4a8/af2fe08759773801218ba2b1e63154a8.jpeg';" alt="Garam Chapati" class="quad-img" draggable="false" loading="eager">
+            <div class="quad-glare"></div>
+            <div class="quad-brass-rim"></div>
+            <div class="quad-tag-pill">
+              <span>🫓 Soft Poli</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Square 3: Bottom-Left (Layer 3) -->
+        <div class="quad-card quad-card-3" id="quadCard3" onclick="open3DShowcase('Dal Amti & Bhaat Special', 'img4', '₹70')" title="Click to view 3D plate">
+          <div class="quad-card-inner">
+            <img src="images/special_deluxe_3d.jpg" onerror="this.onerror=null; this.src='https://b.zmtcdn.com/data/pictures/chains/7/21469117/172802538820f3b17f-9558-4934-a579-11318e57f871.jpg?crop=750%3A500%3B%2A%2C%2A&fit=around%7C750%3A500';" alt="Dal Amti & Bhaat" class="quad-img" draggable="false" loading="eager">
+            <div class="quad-glare"></div>
+            <div class="quad-brass-rim"></div>
+            <div class="quad-tag-pill">
+              <span>🍚 Rice & Amti</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Square 4: Bottom-Right Center (Hero Foreground Layer 4) -->
+        <div class="quad-card quad-card-4" id="quadCard4" onclick="open3DShowcase('Unlimited Maharashtrian Special Thali', 'img1', '₹70')" title="Click to view & rotate 3D plate">
+          <div class="quad-card-inner">
+            <img src="images/thali_hero_3d.jpg" onerror="this.onerror=null; this.src='https://b.zmtcdn.com/data/reviews_photos/a63/18eb1e493cc1df63b18fb84e24d7ca63_1556439281.jpg';" alt="Unlimited Special Thali" class="quad-img" draggable="false" loading="eager">
+            <div class="quad-glare"></div>
+            <div class="quad-brass-rim hero-rim"></div>
+            <div class="quad-tag-pill special-pill">
+              <span>⭐ Unlimited Thali ₹70</span>
+            </div>
+            
+            <!-- Live Rising Steam Particles -->
+            <div class="steam-container">
+              <span class="steam s1"></span>
+              <span class="steam s2"></span>
+              <span class="steam s3"></span>
+              <span class="steam s4"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Center Glowing Emblem -->
+        <div class="quad-center-emblem">
+          <span>✨</span>
+        </div>
+
+      </div>
+
+      <!-- Floating 3D Moveable Badges -->
+      <div class="badge-3d badge-dish-special" id="badgeDishSpecial">
+        <span class="dish-emoji">🥘</span>
+        <div>
+          <b>Kolhapuri Kat Rassa</b>
+          <small>Garam & Homely Taste</small>
+        </div>
+      </div>
+
+      <div class="badge-3d badge-live-counter" id="badgeLiveCounter">
+        <span class="pulse-dot"></span>
+        <div>
+          <b>Live Menus Today</b>
+          <small>₹60 - ₹90 Daily Price</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <aside class="owner-box" id="ownerBoxBanner">
+    <div class="owner-box-flare"></div>
+    <div class="owner-label">FOR MESS OWNERS</div>
+    <h2>List Your Mess on MYMENU</h2>
+    <p>Manage your daily menu, thali price and receive customer parcel orders easily.</p>
+    <ul>
+      <li>List your mess for free</li>
+      <li>Update today's menu & price</li>
+      <li>Receive live parcel orders</li>
+      <li>Direct phone calls from customers</li>
+    </ul>
+    <button id="asideRegisterBtn" onclick="openOwnerAuthModal('register')">Register Your Mess</button>
+  </aside>
+</section>
+
+
+<section id="ownerPortalSection" style="display:none;"></section>
+
+<section class="menu-section" id="menus" style="display:none;">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">SANT TUKARAM NAGAR • PIMPRI • PUNE</p>
+      <h2>Today's Maharashtrian Mess Menu</h2>
+      <p class="subheading">Every mess owner can update today's menu and today's rice plate price.</p>
+    </div>
+  </div>
+
+  <!-- Interactive Live Filter & Search Bar -->
+  <div class="menu-filter-bar">
+    <div class="filter-search-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="messSearchInput" class="filter-search-input" placeholder="Search mess name or dish (e.g. Shev Bhaji, Chapati, Annapurna)..." oninput="handleMessSearch(this.value)">
+      <button type="button" class="search-clear-btn" id="searchClearBtn" onclick="clearMessSearch()" style="display:none;">&times;</button>
+    </div>
+    
+    <div class="filter-chips-row">
+      <button type="button" class="filter-chip active" data-filter="all" onclick="setMessFilter('all', this)">
+        <span>🍱 All Messes</span>
+      </button>
+      <button type="button" class="filter-chip" data-filter="under70" onclick="setMessFilter('under70', this)">
+        <span>🏷️ Under ₹70</span>
+      </button>
+      <button type="button" class="filter-chip" data-filter="special" onclick="setMessFilter('special', this)">
+        <span>⭐ Today's Special</span>
+      </button>
+      <button type="button" class="filter-chip" data-filter="chapati" onclick="setMessFilter('chapati', this)">
+        <span>🫓 Unlimited Chapati</span>
+      </button>
+      <div class="live-serving-pill">
+        <span class="live-pulse-dot"></span>
+        <span>Serving Fresh Now</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="cards" id="messesCardsContainer">
+    <!-- Live cards loaded directly from database when customer is logged in -->
+  </div>
+</section>
+
+
+<section class="menu-info">
+  <div class="info-title">
+    <p class="eyebrow">WHAT A TODAY'S THALI MEANS</p>
+    <h2>Ghar Jaisa, Fresh & Filling</h2>
+  </div>
+  <div class="info-items">
+    <div><span>01</span><b>Chapati</b><small>Freshly made</small></div>
+    <div><span>02</span><b>Rice</b><small>Unlimited</small></div>
+    <div><span>03</span><b>Sukhi Bhaji</b><small>Dry vegetable</small></div>
+    <div><span>04</span><b>Rassa Bhaji</b><small>Gravy vegetable</small></div>
+  </div>
+  <p class="daily-note">Today's menu and price are updated by each mess owner, so you always see the latest meal before ordering.</p>
+</section>
+
+<section class="hygiene-section" id="about">
+  <div class="hygiene-main-image"></div>
+  <div class="hygiene-copy">
+    <p class="eyebrow">MYMENU FOOD PROMISE</p>
+    <h2>Fresh, Clean & Pure Veg</h2>
+    <p>MYMENU is built for students and customers looking for affordable, homely Maharashtrian food from nearby messes.</p>
+    <div class="hygiene-grid">
+      <div><span class="feature-icon">✨</span><b>Clean Kitchens</b><small>Hygiene-focused mess partners</small></div>
+      <div><span class="feature-icon">🌿</span><b>Pure Vegetarian</b><small>100% pure veg homely meals</small></div>
+      <div><span class="feature-icon">🏷️</span><b>Owner Controls Price</b><small>Daily menu & live price updates</small></div>
+      <div><span class="feature-icon">📦</span><b>Easy Parcel Pickup</b><small>Book before collecting food</small></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">
+    <div class="logo-mark">MY<span>MENU</span></div>
+    <p>Aapka Mess, Aapka Menu</p>
+    <small>Only for Sant Tukaram Nagar, Pimpri, Pune</small>
+  </div>
+  <div><h3>MYMENU</h3><a href="#">Home</a><a href="#about">About Us</a></div>
+  <div><h3>For Users</h3><a href="javascript:void(0)" onclick="openCustomerAuthModal('login')">Customer Login</a><a href="javascript:void(0)" onclick="openCustomerAuthModal('register')">Register Free</a></div>
+  <div><h3>For Mess Owners</h3><a href="javascript:void(0)" onclick="openOwnerAuthModal('register')">Register Mess</a><a href="javascript:void(0)" onclick="openOwnerAuthModal('login')">Owner Login</a></div>
+  <div class="footer-note"><strong>Fresh food, better choice.</strong><p>Pure vegetarian meals, clear daily pricing and easy parcel booking.</p></div>
+</footer>
+<div class="copyright">© 2026 MYMENU • Sant Tukaram Nagar, Pimpri, Pune</div>
+
+<nav class="mobile-bottom-nav" id="mobileBottomNav">
+  <a href="#" class="bottom-nav-item active" id="bnavHome" onclick="handleBottomNav('home')">
+    <span class="bnav-icon">🏠</span>
+    <span class="bnav-label">Home</span>
+  </a>
+  <a href="#about" class="bottom-nav-item" id="bnavAbout" onclick="handleBottomNav('about')">
+    <span class="bnav-icon">✨</span>
+    <span class="bnav-label">About</span>
+  </a>
+  <a href="javascript:void(0)" class="bottom-nav-item" id="bnavUser" onclick="handleBottomNav('user')">
+    <span class="bnav-icon">👤</span>
+    <span class="bnav-label" id="bnavUserLabel">Account</span>
+  </a>
+</nav>
+
+<!-- Interactive 3D Moveable Food Showcase Modal -->
+<div id="showcaseModal3D" class="modal-overlay-modern modal-3d-overlay" style="display:none;">
+  <div class="modal-card-modern modal-3d-card">
+    <div class="modal-header-modern">
+      <button type="button" class="modal-close-modern" onclick="close3DShowcase()">&times;</button>
+      <div class="modal-title-group">
+        <span style="font-size: 0.78rem; font-weight: 800; color: #ffcc80; letter-spacing: 0.8px; text-transform: uppercase;">🔮 3D MOVEABLE PICTURE EXPERIENCE</span>
+        <h2 id="showcase3DTitle">Interactive 3D Food Showcase</h2>
+        <p id="showcase3DSubtitle" style="color: #ffeedd; font-size: 0.85rem;">Drag with mouse or touch to rotate the plate in 3D perspective</p>
+      </div>
+    </div>
+    <div class="modal-body-modern" style="padding: 24px 20px 20px; text-align: center;">
+      <div class="showcase-3d-stage" id="showcase3DStage">
+        <div class="showcase-3d-shadow"></div>
+        <div class="showcase-3d-plate" id="showcase3DPlate">
+          <img id="showcase3DImg" src="images/thali_hero_3d.jpg" onerror="this.onerror=null; this.src='https://b.zmtcdn.com/data/reviews_photos/a63/18eb1e493cc1df63b18fb84e24d7ca63_1556439281.jpg';" alt="3D Food Dish" loading="eager">
+          <div class="showcase-3d-glare" id="showcase3DGlare"></div>
+          <div class="showcase-3d-rim"></div>
+        </div>
+      </div>
+      <div class="showcase-3d-controls">
+        <div class="control-row">
+          <span style="font-size: 0.82rem; font-weight: bold; color: #64748b;">🔄 3D View: <span id="showcaseRotLabel" style="color: #d97706;">Rotate 0°</span></span>
+          <button type="button" class="btn-3d-pill" onclick="reset3DPlate()">Reset Angle</button>
+          <button type="button" class="btn-3d-pill" onclick="spin3DPlate()">Auto Spin 360°</button>
+        </div>
+        <div class="showcase-price-row">
+          <div style="text-align: left;">
+            <small style="color: #94a3b8; font-weight: 700; text-transform: uppercase; font-size: 0.75rem;">TODAY'S SPECIAL THALI</small>
+            <div id="showcase3DPrice" style="font-size: 1.6rem; font-weight: 900; color: #b45309;">₹70</div>
+          </div>
+          <button type="button" id="showcaseOrderBtn" class="order-btn" style="padding: 12px 24px; font-size: 1rem; border-radius: 12px;">
+            🍛 Order This Thali Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
