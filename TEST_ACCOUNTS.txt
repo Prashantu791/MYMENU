@@ -1,0 +1,175 @@
+================================================================================
+                    MYMENU - TESTING & DEMO ACCOUNTS LIST
+================================================================================
+Project: MYMENU (Unified Spring Boot + Modern Frontend)
+Website URL: http://localhost:8080/
+Location: Sant Tukaram Nagar, Pimpri, Pune
+Default Password for all Demo Accounts: password123
+================================================================================
+
+--------------------------------------------------------------------------------
+1. CUSTOMER / STUDENT ACCOUNTS (Thali Dekhne & Parcel Order Karne Ke Liye)
+--------------------------------------------------------------------------------
+Use these accounts to log in as a Customer/Student. You can view all today's 
+special menus, plate prices (₹60 - ₹90), call mess owners, and place parcel orders.
+
+Account #1 (Primary Demo Customer):
+- Role:     CUSTOMER
+- Name:     Demo Customer
+- Email:    customer@mymenu.local
+- Password: password123
+- Phone:    9876543210
+
+Account #2:
+- Role:     CUSTOMER
+- Name:     Shreyas
+- Email:    shreyas@gmail.com
+- Password: password123
+
+
+--------------------------------------------------------------------------------
+2. MESS OWNER ACCOUNTS (Menu, Price & Parcel Orders Manage Karne Ke Liye)
+--------------------------------------------------------------------------------
+NOTE: Mess Owners have a dedicated private portal. A mess owner can only see and
+manage their own mess. Other mess owners are completely hidden for privacy.
+Jab bhi koi naya Mess Owner register hota hai, unki info automatically DB ke
+separate 'mess_owners' table me save hoti hai!
+
+[Mess 1] Siddheshwar Bhojanalay (Today's Special Mess)
+- Role:         OWNER
+- Owner Name:   Siddheshwar Owner
+- Email:        owner1@mymenu.local
+- Password:     password123
+- Mess ID:      1
+- Phone:        9000000001
+- Address:      Near Savtamali Garden
+
+[Mess 2] Ganesh Mess
+- Role:         OWNER
+- Owner Name:   Ganesh Owner
+- Email:        owner2@mymenu.local
+- Password:     password123
+- Mess ID:      2
+- Phone:        9000000002
+- Address:      Beside ATM, opposite to Girls Hostel
+
+[Mess 3] Khandesho Mess
+- Role:         OWNER
+- Owner Name:   Khandesho Owner
+- Email:        owner3@mymenu.local
+- Password:     password123
+- Mess ID:      3
+- Phone:        9000000003
+- Address:      Near YCM
+
+[Mess 4] Panjabi Mess
+- Role:         OWNER
+- Owner Name:   Panjabi Owner
+- Email:        owner4@mymenu.local
+- Password:     password123
+- Mess ID:      4
+- Phone:        9000000004
+- Address:      Near Ganesh Mess
+
+[Mess 5] Shree Ganesh Bhojanalay
+- Role:         OWNER
+- Owner Name:   Shree Ganesh Owner
+- Email:        owner5@mymenu.local
+- Password:     password123
+- Mess ID:      5
+- Phone:        9000000005
+- Address:      Near Sant Tukaram Nagar
+
+[Mess 6] Mauli Mess
+- Role:         OWNER
+- Owner Name:   Mauli Owner
+- Email:        owner6@mymenu.local
+- Password:     password123
+- Mess ID:      6
+- Phone:        9000000006
+- Address:      Near Pimpri Market
+
+[Mess 7] Shivneri Bhojanalay
+- Role:         OWNER
+- Owner Name:   Shivneri Owner
+- Email:        owner7@mymenu.local
+- Password:     password123
+- Mess ID:      7
+- Phone:        9000000007
+- Address:      Near YCM Hospital
+
+[Mess 8] Krishna Mess
+- Role:         OWNER
+- Owner Name:   Krishna Owner
+- Email:        owner8@mymenu.local
+- Password:     password123
+- Mess ID:      8
+- Phone:        9000000008
+- Address:      Near Girls Hostel
+
+[Mess 9] Shubham Mess
+- Role:         OWNER
+- Owner Name:   Shubham Owner
+- Email:        owner9@mymenu.local
+- Password:     password123
+- Mess ID:      9
+- Phone:        9000000009
+- Address:      Near Savtamali Garden
+
+[Mess 10] Swami Samarth Mess
+- Role:         OWNER
+- Owner Name:   Swami Samarth Owner
+- Email:        owner10@mymenu.local
+- Password:     password123
+- Mess ID:      10
+- Phone:        9000000010
+- Address:      Near Ganesh Mess
+
+[Mess 15] Tukaram Prasad Bhojanalay (Newly Registered Test Mess)
+- Role:         OWNER
+- Owner Name:   Tukaram Maharaj Owner
+- Email:        tukaram@mymenu.local
+- Password:     password123
+- Mess ID:      15
+- Phone:        9888877777
+- Address:      Near Sant Tukaram Mandir, Pimpri
+
+
+--------------------------------------------------------------------------------
+3. DATABASE SEPARATE TABLE INFO ('mess_owners')
+--------------------------------------------------------------------------------
+Jab bhi koi Mess Owner register karta hai, unka data MySQL me dedicated table
+'mess_owners' me store hota hai:
+
+Table Name: mess_owners
+Columns:
+- id            : Auto-increment primary key
+- user_id       : Link to users table (ID)
+- owner_name    : Full Name of the Owner
+- email         : Registered Email
+- phone         : Contact Mobile Number
+- mess_id       : Link to messes table (ID)
+- mess_name     : Name of the Mess
+- mess_address  : Location / Address
+- created_at    : Registration timestamp
+
+MySQL Workbench me check karne ke liye query:
+    USE mymenu;
+    SELECT * FROM mess_owners;
+
+Direct REST API se check karne ke liye:
+    GET http://localhost:8080/api/auth/mess-owners
+
+
+--------------------------------------------------------------------------------
+4. HOW TO RUN SERVER
+--------------------------------------------------------------------------------
+Option 1: Double-click 'START_SERVER.bat' in the project folder.
+Option 2: In STS (Spring Tools for Eclipse), right-click MyMenuApplication.java -> Run As -> Spring Boot App.
+
+Port 8080 agar busy ho to:
+- Double-click 'FREE_PORT_8080.bat' to immediately free port 8080.
+
+Website Link:
+    http://localhost:8080/
+================================================================================

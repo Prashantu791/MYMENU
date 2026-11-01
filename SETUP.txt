@@ -1,0 +1,40 @@
+MYMENU SINGLE PROJECT SETUP - SPRING TOOLS FOR ECLIPSE (STS)
+=============================================================
+
+Ab frontend aur backend alag-alag chalane ki zaroorat nahi hai.
+Spring Boot hi frontend aur backend dono ko ek sath run karta hai!
+
+
+PROJECT STRUCTURE
+-----------------
+d:\Projects\MYMENU\
+|-- BACKEND/                              <-- STS PROJECT
+|   |-- pom.xml                           <-- Java 17 + Spring Boot
+|   |-- database.sql                      <-- Run in MySQL Workbench
+|   `-- src/main/
+|       |-- java/com/mymenu/              <-- Backend Java code & REST APIs
+|       `-- resources/
+|           |-- application.properties    <-- Database connection
+|           `-- static/                   <-- Frontend files inside Spring Boot
+|               |-- index.html
+|               |-- style.css
+|               `-- app.js
+|
+`-- FRONTEND/                             <-- Backup source copy
+
+
+HOW TO RUN
+----------
+Option A (In STS):
+1. Open MySQL Workbench -> open database.sql -> Execute all queries.
+2. In STS, right-click `mymenu-backend` -> Maven -> Update Project... (Alt+F5) -> OK.
+3. In STS, right-click `mymenu-backend` -> Run As -> Spring Boot App.
+
+Option B (1-Click without STS):
+- Double click `START_SERVER.bat` in `d:\Projects\MYMENU`.
+
+4. Open your browser:
+   http://localhost:8080/
+
+That's it! Both Frontend and Backend will run together.
+No XAMPP or Apache server is needed.
