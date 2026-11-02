@@ -131,9 +131,9 @@
       <div class="hero-quad-cluster" id="heroQuadCluster">
         
         <!-- Square 1: Top-Left (Layer 1) -->
-        <div class="quad-card quad-card-1" id="quadCard1" onclick="open3DShowcase('Kolhapuri Kat Rassa Thali', 'img2', '₹70')" title="Click to view 3D plate">
+        <div class="quad-card quad-card-1" id="quadCard1">
           <div class="quad-card-inner">
-            <img src="images/rassa_bhaji_3d.jpg" onerror="this.onerror=null; this.src='https://b.zmtcdn.com/data/pictures/chains/2/6507122/ab7aea690fea7609339bf1e432b01257.jpg';" alt="Kolhapuri Kat Rassa" class="quad-img" draggable="false" loading="eager">
+            <img src="images/rassa_bhaji_3d.jpg" alt="Kolhapuri Kat Rassa" class="quad-img" draggable="false" loading="eager">
             <div class="quad-glare"></div>
             <div class="quad-brass-rim"></div>
             <div class="quad-tag-pill">
@@ -143,9 +143,9 @@
         </div>
 
         <!-- Square 2: Top-Right (Layer 2) -->
-        <div class="quad-card quad-card-2" id="quadCard2" onclick="open3DShowcase('Garam Chapati Poli', 'img3', '₹70')" title="Click to view 3D plate">
+        <div class="quad-card quad-card-2" id="quadCard2">
           <div class="quad-card-inner">
-            <img src="images/chapati_bhaji_3d.jpg" onerror="this.onerror=null; this.src='https://b.zmtcdn.com/data/dish_photos/4a8/af2fe08759773801218ba2b1e63154a8.jpeg';" alt="Garam Chapati" class="quad-img" draggable="false" loading="eager">
+            <img src="images/chapati_bhaji_3d.jpg" alt="Garam Chapati" class="quad-img" draggable="false" loading="eager">
             <div class="quad-glare"></div>
             <div class="quad-brass-rim"></div>
             <div class="quad-tag-pill">
@@ -155,9 +155,9 @@
         </div>
 
         <!-- Square 3: Bottom-Left (Layer 3) -->
-        <div class="quad-card quad-card-3" id="quadCard3" onclick="open3DShowcase('Dal Amti & Bhaat Special', 'img4', '₹70')" title="Click to view 3D plate">
+        <div class="quad-card quad-card-3" id="quadCard3">
           <div class="quad-card-inner">
-            <img src="images/special_deluxe_3d.jpg" onerror="this.onerror=null; this.src='https://b.zmtcdn.com/data/pictures/chains/7/21469117/172802538820f3b17f-9558-4934-a579-11318e57f871.jpg?crop=750%3A500%3B%2A%2C%2A&fit=around%7C750%3A500';" alt="Dal Amti & Bhaat" class="quad-img" draggable="false" loading="eager">
+            <img src="images/special_deluxe_3d.jpg" alt="Dal Amti & Bhaat" class="quad-img" draggable="false" loading="eager">
             <div class="quad-glare"></div>
             <div class="quad-brass-rim"></div>
             <div class="quad-tag-pill">
@@ -167,9 +167,9 @@
         </div>
 
         <!-- Square 4: Bottom-Right Center (Hero Foreground Layer 4) -->
-        <div class="quad-card quad-card-4" id="quadCard4" onclick="open3DShowcase('Unlimited Maharashtrian Special Thali', 'img1', '₹70')" title="Click to view & rotate 3D plate">
+        <div class="quad-card quad-card-4" id="quadCard4">
           <div class="quad-card-inner">
-            <img src="images/thali_hero_3d.jpg" onerror="this.onerror=null; this.src='https://b.zmtcdn.com/data/reviews_photos/a63/18eb1e493cc1df63b18fb84e24d7ca63_1556439281.jpg';" alt="Unlimited Special Thali" class="quad-img" draggable="false" loading="eager">
+            <img src="images/thali_hero_3d.jpg" alt="Unlimited Special Thali" class="quad-img" draggable="false" loading="eager">
             <div class="quad-glare"></div>
             <div class="quad-brass-rim hero-rim"></div>
             <div class="quad-tag-pill special-pill">
@@ -302,73 +302,143 @@
   </div>
 </section>
 
-<footer>
-  <div class="footer-brand">
-    <div class="logo-mark">MY<span>MENU</span></div>
-    <p>Aapka Mess, Aapka Menu</p>
-    <small>Only for Sant Tukaram Nagar, Pimpri, Pune</small>
-  </div>
-  <div><h3>MYMENU</h3><a href="#">Home</a><a href="#about">About Us</a></div>
-  <div><h3>For Users</h3><a href="javascript:void(0)" onclick="openCustomerAuthModal('login')">Customer Login</a><a href="javascript:void(0)" onclick="openCustomerAuthModal('register')">Register Free</a></div>
-  <div><h3>For Mess Owners</h3><a href="javascript:void(0)" onclick="openOwnerAuthModal('register')">Register Mess</a><a href="javascript:void(0)" onclick="openOwnerAuthModal('login')">Owner Login</a></div>
-  <div class="footer-note"><strong>Fresh food, better choice.</strong><p>Pure vegetarian meals, clear daily pricing and easy parcel booking.</p></div>
-</footer>
-<div class="copyright">© 2026 MYMENU • Sant Tukaram Nagar, Pimpri, Pune</div>
-
-<nav class="mobile-bottom-nav" id="mobileBottomNav">
-  <a href="#" class="bottom-nav-item active" id="bnavHome" onclick="handleBottomNav('home')">
-    <span class="bnav-icon">🏠</span>
-    <span class="bnav-label">Home</span>
-  </a>
-  <a href="#about" class="bottom-nav-item" id="bnavAbout" onclick="handleBottomNav('about')">
-    <span class="bnav-icon">✨</span>
-    <span class="bnav-label">About</span>
-  </a>
-  <a href="javascript:void(0)" class="bottom-nav-item" id="bnavUser" onclick="handleBottomNav('user')">
-    <span class="bnav-icon">👤</span>
-    <span class="bnav-label" id="bnavUserLabel">Account</span>
-  </a>
-</nav>
-
-<!-- Interactive 3D Moveable Food Showcase Modal -->
-<div id="showcaseModal3D" class="modal-overlay-modern modal-3d-overlay" style="display:none;">
-  <div class="modal-card-modern modal-3d-card">
-    <div class="modal-header-modern">
-      <button type="button" class="modal-close-modern" onclick="close3DShowcase()">&times;</button>
-      <div class="modal-title-group">
-        <span style="font-size: 0.78rem; font-weight: 800; color: #ffcc80; letter-spacing: 0.8px; text-transform: uppercase;">🔮 3D MOVEABLE PICTURE EXPERIENCE</span>
-        <h2 id="showcase3DTitle">Interactive 3D Food Showcase</h2>
-        <p id="showcase3DSubtitle" style="color: #ffeedd; font-size: 0.85rem;">Drag with mouse or touch to rotate the plate in 3D perspective</p>
+<footer class="neu-footer">
+  <div class="footer-grid">
+    <!-- Card 1: Brand & Locality -->
+    <div class="neu-footer-card brand-card">
+      <div class="footer-brand">
+        <div class="logo-mark">MY<span>MENU</span></div>
+        <p class="footer-tagline">Aapka Mess, Aapka Menu</p>
+      </div>
+      <p class="footer-mission">Direct parcel booking, live daily menus and thali pricing from verified messes of Sant Tukaram Nagar, Pimpri.</p>
+      <div class="footer-badges-wrap">
+        <span class="neu-footer-badge veg-badge">
+          <span class="badge-dot"></span> 100% Pure Veg Promise
+        </span>
+        <span class="neu-footer-badge area-badge">
+          <span>📍</span> Sant Tukaram Nagar, Pimpri
+        </span>
       </div>
     </div>
-    <div class="modal-body-modern" style="padding: 24px 20px 20px; text-align: center;">
-      <div class="showcase-3d-stage" id="showcase3DStage">
-        <div class="showcase-3d-shadow"></div>
-        <div class="showcase-3d-plate" id="showcase3DPlate">
-          <img id="showcase3DImg" src="images/thali_hero_3d.jpg" onerror="this.onerror=null; this.src='https://b.zmtcdn.com/data/reviews_photos/a63/18eb1e493cc1df63b18fb84e24d7ca63_1556439281.jpg';" alt="3D Food Dish" loading="eager">
-          <div class="showcase-3d-glare" id="showcase3DGlare"></div>
-          <div class="showcase-3d-rim"></div>
+
+    <!-- Card 2: Quick Links -->
+    <div class="neu-footer-card">
+      <h3 class="footer-title"><span>🍱</span> Quick Explore</h3>
+      <ul class="footer-links">
+        <li><a href="#" class="neu-footer-link" onclick="handleBottomNav('home')"><span>🏠</span> Home</a></li>
+        <li><a href="javascript:void(0)" class="neu-footer-link" onclick="handleNavMenuClick()"><span>🍱</span> Today's Menu <span class="badge-live-sm">LIVE</span></a></li>
+        <li><a href="#about" class="neu-footer-link"><span>🌿</span> Pure Veg Promise</a></li>
+        <li><a href="javascript:void(0)" class="neu-footer-link" onclick="handleNavMenuClick()"><span>🍛</span> Daily Unlimited Thali</a></li>
+      </ul>
+    </div>
+
+    <!-- Card 3: For Diners -->
+    <div class="neu-footer-card">
+      <h3 class="footer-title"><span>👤</span> For Diners</h3>
+      <ul class="footer-links">
+        <li><a href="javascript:void(0)" class="neu-footer-link" onclick="openCustomerAuthModal('login')"><span>🔑</span> Customer Login</a></li>
+        <li><a href="javascript:void(0)" class="neu-footer-link" onclick="openCustomerAuthModal('register')"><span>✨</span> Create Free Account</a></li>
+        <li><a href="javascript:void(0)" class="neu-footer-link" onclick="handleNavMenuClick()"><span>🍛</span> Daily Thali Pricing</a></li>
+        <li><a href="#about" class="neu-footer-link"><span>🛡️</span> Kitchen Hygiene Standards</a></li>
+      </ul>
+    </div>
+
+    <!-- Card 4: For Mess Owners -->
+    <div class="neu-footer-card">
+      <h3 class="footer-title"><span>👨‍🍳</span> For Mess Owners</h3>
+      <ul class="footer-links">
+        <li><a href="javascript:void(0)" class="neu-footer-link owner-link" onclick="openOwnerAuthModal('register')"><span>🚀</span> Register Your Mess (Free)</a></li>
+        <li><a href="javascript:void(0)" class="neu-footer-link owner-link" onclick="openOwnerAuthModal('login')"><span>🚪</span> Owner Portal Login</a></li>
+        <li><a href="javascript:void(0)" class="neu-footer-link" onclick="openOwnerAuthModal('login')"><span>📋</span> Update Daily Menu</a></li>
+        <li><a href="javascript:void(0)" class="neu-footer-link" onclick="openOwnerAuthModal('login')"><span>📦</span> Manage Parcel Orders</a></li>
+      </ul>
+    </div>
+
+    <!-- Card 5: Trust Banner & Contact -->
+    <div class="neu-footer-card note-card">
+      <div class="footer-note-content">
+        <div class="note-header">
+          <span class="note-icon">🍛</span>
+          <strong>Fresh food, better choice.</strong>
         </div>
-      </div>
-      <div class="showcase-3d-controls">
-        <div class="control-row">
-          <span style="font-size: 0.82rem; font-weight: bold; color: #64748b;">🔄 3D View: <span id="showcaseRotLabel" style="color: #d97706;">Rotate 0°</span></span>
-          <button type="button" class="btn-3d-pill" onclick="reset3DPlate()">Reset Angle</button>
-          <button type="button" class="btn-3d-pill" onclick="spin3DPlate()">Auto Spin 360°</button>
-        </div>
-        <div class="showcase-price-row">
-          <div style="text-align: left;">
-            <small style="color: #94a3b8; font-weight: 700; text-transform: uppercase; font-size: 0.75rem;">TODAY'S SPECIAL THALI</small>
-            <div id="showcase3DPrice" style="font-size: 1.6rem; font-weight: 900; color: #b45309;">₹70</div>
+        <p>Pure vegetarian meals, clear daily pricing and easy parcel booking for students and professionals.</p>
+        <div class="note-stats-row">
+          <div class="note-stat-item">
+            <b>10+</b>
+            <small>Active Messes</small>
           </div>
-          <button type="button" id="showcaseOrderBtn" class="order-btn" style="padding: 12px 24px; font-size: 1rem; border-radius: 12px;">
-            🍛 Order This Thali Now
-          </button>
+          <div class="note-stat-divider"></div>
+          <div class="note-stat-item">
+            <b>₹60 - ₹90</b>
+            <small>Unlimited Thali</small>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+
+  <div class="footer-bottom-bar">
+    <div class="copyright-pill">
+      <span>© 2026 MYMENU • Crafted with ❤️ for Sant Tukaram Nagar, Pimpri, Pune</span>
+    </div>
+    <button type="button" class="btn-scroll-top" onclick="window.scrollTo({top:0, behavior:'smooth'})" title="Scroll to Top">
+      <span>↑</span> Top
+    </button>
+  </div>
+</footer>
+
+<nav class="mobile-bottom-nav" id="mobileBottomNav" aria-label="Mobile Navigation">
+  <div class="bnav-cradle-notch" aria-hidden="true"></div>
+
+  <!-- Item 1: Home (In Box) -->
+  <div class="bnav-box-slot">
+    <a href="#" class="bottom-nav-item in-box-btn active" id="bnavHome" onclick="handleBottomNav('home')">
+      <span class="bnav-icon">🏠</span>
+      <span class="bnav-label">Home</span>
+      <span class="bnav-indicator"></span>
+    </a>
+  </div>
+
+  <!-- Item 2: Menu (In Box) -->
+  <div class="bnav-box-slot">
+    <a href="javascript:void(0)" class="bottom-nav-item in-box-btn" id="bnavMenu" onclick="handleBottomNav('menus')">
+      <span class="bnav-icon">🍱</span>
+      <span class="bnav-label">Menu</span>
+      <span class="bnav-indicator"></span>
+    </a>
+  </div>
+
+  <!-- Middle Action Button (OUT OF THE BOX!) -->
+  <div class="bnav-middle-slot">
+    <button type="button" class="bnav-middle-btn out-of-box-btn" id="bnavMiddleBtn" onclick="handleBottomNav('quickOrder')" title="Quick Order & Live Thali">
+      <span class="bnav-fab-halo"></span>
+      <span class="bnav-fab-ring"></span>
+      <div class="bnav-fab-core">
+        <span class="bnav-fab-icon">🍛</span>
+        <span class="bnav-fab-badge">LIVE</span>
+      </div>
+      <span class="bnav-fab-caption">ORDER</span>
+    </button>
+  </div>
+
+  <!-- Item 3: Pure Veg / About (In Box) -->
+  <div class="bnav-box-slot">
+    <a href="#about" class="bottom-nav-item in-box-btn" id="bnavAbout" onclick="handleBottomNav('about')">
+      <span class="bnav-icon">🌿</span>
+      <span class="bnav-label">Pure Veg</span>
+      <span class="bnav-indicator"></span>
+    </a>
+  </div>
+
+  <!-- Item 4: Account / Portal (In Box) -->
+  <div class="bnav-box-slot">
+    <a href="javascript:void(0)" class="bottom-nav-item in-box-btn" id="bnavUser" onclick="handleBottomNav('user')">
+      <span class="bnav-icon">👤</span>
+      <span class="bnav-label" id="bnavUserLabel">Account</span>
+      <span class="bnav-indicator"></span>
+    </a>
+  </div>
+</nav>
 
 <script src="app.js"></script>
 </body>
