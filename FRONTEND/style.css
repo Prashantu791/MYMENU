@@ -406,7 +406,7 @@ nav a.active {
   display: grid;
   grid-template-columns: 1.15fr 400px 330px;
   gap: 36px;
-  align-items: stretch;
+  align-items: center;
   position: relative;
   z-index: 2;
   box-sizing: border-box;
@@ -1179,13 +1179,14 @@ nav a.active {
   background: var(--neu-base);
   box-shadow: 12px 12px 28px #cfc7ba, -12px -12px 28px #ffffff;
   border-radius: 26px;
-  padding: 28px 24px 24px;
+  padding: 26px 22px 22px;
   text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  min-height: 480px;
-  height: 100%;
+  height: auto;
+  min-height: auto;
+  align-self: center;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   width: 100%;
   max-width: 330px;
@@ -1344,7 +1345,7 @@ nav a.active {
 }
 
 .owner-box-media-preview.secondary-preview {
-  margin-bottom: 12px;
+  margin-bottom: 0;
 }
 
 .owner-banner-img {
@@ -1412,7 +1413,7 @@ nav a.active {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: auto;
+  margin-top: 14px;
 }
 
 .owner-box button:hover {
@@ -4741,7 +4742,7 @@ footer, .neu-footer {
     margin: 2px 0 6px !important;
   }
   .owner-box-media-preview.secondary-preview {
-    margin-bottom: 12px !important;
+    margin-bottom: 0 !important;
   }
   .owner-box button {
     padding: 13px 18px;
@@ -4753,7 +4754,7 @@ footer, .neu-footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 4px;
+    margin-top: 12px !important;
   }
 
   /* Menu Section & Cards */
